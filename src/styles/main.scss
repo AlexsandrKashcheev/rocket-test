@@ -160,11 +160,84 @@ body{
 
 /*----------------Check-up------------------*/
 
+.check-up__wrapper{
+    background: url(../images/checkUpBg.png) no-repeat top right;
+    .check-up__description{
+        padding: 53px 664px 56px 63px;
+        background: url(../images/checkUpDescBg.svg) no-repeat top left;
+    }
+}
+
+
+.check-up__title{
+    margin-bottom: 16px;
+    .title_desc{
+        max-width: 181px;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 49px;
+        text-transform: uppercase;
+    }
+    span {
+        font-weight: 700;
+        font-size: 22px;
+        color: $base-font-color;
+    }
+}
+.check-up__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 33px;
+    .list__item{
+        padding-left: 15px;
+        background: url(../images/pointList.svg) no-repeat 0 6px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $base-font-color;
+    }
+}
+.check-up__price{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 26px;
+    span{
+        margin-left: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #868686;
+        text-decoration-line: line-through;
+
+    }
+}
+
+.check-up_button_green{
+    padding: 11px 59px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: $button-color;
+    margin-right: 14px;
+    &:hover, &:active, &:focus{
+        background-color: $button-hover;
+    }
+}
+.check-up_button{
+    padding: 11px 59px;
+    color: $button-color;
+    border: 1px solid $button-color;
+    &:hover, &:active, &:focus{
+        background-color: $button-color;
+        color: #FFFFFF;
+    }
+}
 
 
 
-
-/*----------------Check-up------------------*/
+/*----------------Check-up end------------------*/
 
 
 
@@ -172,7 +245,7 @@ body{
 
 /*--------------Media----------------------*/
 
-@media(max-width: 376px){
+@media(max-width: 426px){
     .burger{
         display: block;
     }
@@ -265,12 +338,13 @@ body{
     /*----------------intro------------------*/
 
     .intro{
-        background: url(../images/introbg.png) no-repeat top right;
-        background-size: 375px 288px;
+        background: url(../images/introbg.png) no-repeat top center;
+        background-size: 100%;
+        margin-bottom: 49px;
     }
 
     .intro__container{
-        padding: 323px 15px 53px 18px;
+        padding: 270px 15px 53px 18px;
     }
 
     .intro__title{
@@ -289,4 +363,54 @@ body{
             font-size: 14px;
         }
     }
+
+    /*-----------intro end-----------*/
+    /*------------checkup---------------*/
+
+    .check-up__wrapper{
+        background: url(../images/checkUpBg.png) no-repeat top center;
+        background-size: 100%;
+        padding-top: 269px;
+        .check-up__description{
+            padding: 22px 30px 42px 22px;
+            background: none;
+            background-color: #E2F0EF;
+        }
+    }
+    .check-up__title{
+        margin-bottom: 12px;
+        .title_desc{
+            font-size: 26px;
+            line-height: 34px;
+        }
+        span {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .check-up__list{
+        margin-bottom: 17px;
+        .list__item{
+            font-size: 14px;
+            line-height: 145%;
+        }
+    }
+    .check-up__price{
+        font-size: 18px;
+        line-height: 23px;
+        span{
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .check-up_button_green{
+        padding: 11px 29px;
+        font-size: 14px;
+        line-height: 21px;
+        margin-right: 6px;
+    }
+    .check-up_button{
+        padding: 11px 29px;
+    }
 }
+
