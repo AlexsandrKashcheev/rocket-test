@@ -4,6 +4,7 @@ $base-color: #1FA181;
 $button-color: #0DBC91;
 $button-hover: #00D29F;
 $base-font-color: #364844;
+$footer-color: #08664F;
 
 body{
     font-family: 'PT Sans Caption', sans-serif;
@@ -16,6 +17,14 @@ body{
 }
 
 /*------------------header------------------*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+}
 
 .header__container {
     display: flex;
@@ -121,6 +130,10 @@ body{
 
 /*------------------header end------------------*/
 
+.main{
+    padding-top: 100px;
+}
+
 /*------------------intro-----------------------*/
 
 .intro{
@@ -160,8 +173,17 @@ body{
 
 /*----------------Check-up------------------*/
 
+.check-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    padding-bottom: 160px;
+}
+
 .check-up__wrapper{
     background: url(../images/checkUpBg.png) no-repeat top right;
+    border-radius: 5px 5px 0px 0px;
     .check-up__description{
         padding: 53px 664px 56px 63px;
         background: url(../images/checkUpDescBg.svg) no-repeat top left;
@@ -235,9 +257,51 @@ body{
     }
 }
 
+.check-up__paginator{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    .counter{
+        display: flex;
+    }
+}
 
 
 /*----------------Check-up end------------------*/
+
+/*----------------footer------------------*/
+
+
+.footer{
+    padding: 54px 0px;
+    background-color: $footer-color;
+}
+
+.footer__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    .item-link{
+        font-family: 'PT Sans Caption', sans-serif;
+        text-decoration: none;
+        color: #FFFFFF;
+        transition: all .2s ease;
+        &:hover{
+            color: #c7c7c7;
+        }
+    }
+}
+
+
+
+/*----------------footer end------------------*/
 
 
 
@@ -335,6 +399,10 @@ body{
     }
     /*-------------header end----------------*/
 
+    .main{
+        padding-top: 65px;
+    }
+
     /*----------------intro------------------*/
 
     .intro{
@@ -370,7 +438,7 @@ body{
     .check-up__wrapper{
         background: url(../images/checkUpBg.png) no-repeat top center;
         background-size: 100%;
-        padding-top: 269px;
+        padding-top: 230px;
         .check-up__description{
             padding: 22px 30px 42px 22px;
             background: none;
@@ -412,5 +480,30 @@ body{
     .check-up_button{
         padding: 11px 29px;
     }
+
+    /*---------------footer--------------*/
+
+    .footer__container{
+        align-items: flex-start;
+        row-gap: 31px;
+        column-gap: 50px;
+        padding: 0px 15px;
+    }
+
+    .footer-list{
+        order: 1;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .social_img{
+        width: 24px;
+        height: 23px;
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+
 }
 
