@@ -24,6 +24,7 @@ body{
     left: 0;
     width: 100%;
     background-color: #FFFFFF;
+    z-index: 1;
 }
 
 .header__container {
@@ -181,6 +182,15 @@ body{
     padding-bottom: 160px;
 }
 
+.slider-container{
+    overflow: hidden;
+}
+
+.slider-track{
+    display: flex;
+    transition: all .3s ease;
+}
+
 .check-up__wrapper{
     background: url(../images/checkUpBg.png) no-repeat top right;
     border-radius: 5px 5px 0px 0px;
@@ -261,8 +271,19 @@ body{
     display: flex;
     align-items: center;
     gap: 36px;
+
+    .arrow-left{
+        padding: 10px 20px;
+        background: url(../images/left-arrow.png) no-repeat center;
+        border: 0;
+    }
     .counter{
         display: flex;
+    }
+    .arrow-right{
+        padding: 10px 20px;
+        background: url(../images/right-arrow.png) no-repeat center;
+        border: 0;
     }
 }
 
@@ -435,7 +456,17 @@ body{
     /*-----------intro end-----------*/
     /*------------checkup---------------*/
 
+    .check-up{
+        width: 100%;
+        padding-bottom: 100px;
+    }
+
+    .slider-container{
+        width: 100vw;
+    }
+
     .check-up__wrapper{
+        width: 100vw;
         background: url(../images/checkUpBg.png) no-repeat top center;
         background-size: 100%;
         padding-top: 230px;
@@ -507,3 +538,29 @@ body{
 
 }
 
+@media(max-width: 368px){
+    .logo{
+        margin-left: 23px;
+    }
+
+    .intro__container{
+        padding: 230px 15px 33px 18px;
+    }
+
+    .slider-container{
+        width: 100vw;
+    }
+
+    .check-up__wrapper{
+        padding-top: 200px;
+    }
+
+    .check-up_button_green{
+        padding: 11px 20px;
+    }
+
+    .check-up_button{
+        padding: 11px 20px;
+    }
+
+}
